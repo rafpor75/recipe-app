@@ -1,32 +1,21 @@
 package guru.springframework.domain;
 
+import lombok.Data;
 
-import javax.persistence.Id;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+/**
+ * Created by jt on 6/13/17.
+ */
+@Data
+@Entity
 public class UnitOfMeasure {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
-	
-	private String uom;
 
-	public String getUom() {
-		return uom;
-	}
-
-	public void setUom(String uom) {
-		this.uom = uom;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String description;
 }
