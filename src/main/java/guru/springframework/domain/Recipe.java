@@ -2,7 +2,6 @@ package guru.springframework.domain;
 
 import lombok.Data;
 
-
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,18 +9,14 @@ import java.util.Set;
 /**
  * Created by jt on 6/13/17.
  */
-
-@Entity
 @Data
+@Entity
 public class Recipe {
 
-	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-  
-    
     private String description;
     private Integer prepTime;
     private Integer cookTime;
